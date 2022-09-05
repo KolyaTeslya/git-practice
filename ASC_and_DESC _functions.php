@@ -18,7 +18,7 @@ function AscSort($coll)
             }
         }
         $size--;
-    } while ($swapped); 
+    } while ($swapped);
 
     return $coll;
 
@@ -44,7 +44,7 @@ function DescSort($coll)
             }
         }
         $size--;
-    } while ($swapped); 
+    } while ($swapped);
 
     return $coll;
 }
