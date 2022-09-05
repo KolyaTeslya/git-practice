@@ -21,6 +21,7 @@ function AscSort($coll)
     } while ($swapped); 
 
     return $coll;
+
 }
 
 print_r(AscSort([7, 2, 9, 10, -2, 0]));
