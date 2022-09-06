@@ -29,8 +29,8 @@ if($_POST['data']){
     echo '<br/><br/>Прошло с указанного момента до текущего:<br/><br/>';
     echo 'Years ago: '.$diff->format('%y').'<br/>';
     echo 'Days ago: '. 30 * $diff->format('%m') + $diff->format('%d').'<br/>';
-    echo 'Hours ago: '.$diff->format('%H').'<br/>';
-    echo 'Minutes ago: '.$diff->format('%i').'<br/>';
+    echo 'Hours ago: '. 24 * $diff->format('%d') + $diff->format('%H').'<br/>';
+    echo 'Minutes ago: '. 60 * $diff->format('%H') + $diff->format('%i').'<br/>';
 }
 
 
