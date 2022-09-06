@@ -7,21 +7,15 @@ function AscDescSort($coll, $typeOfSort)
     do {
         $swapped = false;
         for ($i = 0; $i < $size - 1; $i++) {
-            if ($typeOfSort == 'Asc') {
-                if ($coll[$i] > $coll[$i + 1]) {
+
+            $some = $typeOfSort == 'Asc' ?  $coll[$i] > $coll[$i + 1] : $coll[$i] < $coll[$i + 1];
+
+                if ($some) {
                     $temp = $coll[$i];
                     $coll[$i] = $coll[$i + 1];
                     $coll[$i + 1] = $temp;
                     $swapped = true;
                 }
-            } else {
-                if ($coll[$i] < $coll[$i + 1]) {
-                    $temp = $coll[$i];
-                    $coll[$i] = $coll[$i + 1];
-                    $coll[$i + 1] = $temp;
-                    $swapped = true;
-                }
-            }
         }
         if ($typeOfSort !== 'Asc' and $typeOfSort !== 'Desc') {
             return 'Неверные данные';
