@@ -26,3 +26,35 @@ function AscDescSort($coll, $typeOfSort)
 }
 
 print_r(AscDescSort($coll, $typeOfSort));
+
+
+// version 2
+
+
+function order($arr, $typeOfSort)
+{
+    if ($typeOfSort !== "Asc" && $typeOfSort !== "Desc") {
+        return "false data";
+    }
+    $res = [];
+
+    foreach ($arr as $key => $value) {
+        $some = $typeOfSort == 'Asc' ? min($arr) == $value : max($arr) == $value;
+        if ($some) {
+            $res[] = $value;
+            unset($arr["$key"]);
+        }
+    }
+
+    return $res;
+}
+
+$type = "Desc";
+$arr = array(9, 8, 3, 7, 4, 6, 5);
+print_r(order($arr, $type));
+
+
+
+
+
+
