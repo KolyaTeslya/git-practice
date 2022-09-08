@@ -37,16 +37,12 @@ function order($arr, $typeOfSort)
         return "false data";
     }
     $res = [];
-
-    foreach ($arr as $key => $value) {
-        $some = $typeOfSort == 'Asc' ? min($arr) == $value : max($arr) == $value;
-        if ($some) {
-            $res[] = $value;
-            unset($arr["$key"]);
-        }
+    foreach ($arr as $value) {
+        $some = $typeOfSort == 'Asc' ? min($arr) : max($arr);
+        unset($arr[array_search($some, $arr)]);
+        $res1[] = $some;
     }
-
-    return $res;
+    return $res1;
 }
 
 $type = "Desc";
