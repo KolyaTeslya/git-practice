@@ -48,3 +48,4 @@ function order($arr, $typeOfSort)
 $type = "Desc";
 $arr = array(9, 8, 3, 7, 4, 6, 5);
 print_r(order($arr, $type));
+
