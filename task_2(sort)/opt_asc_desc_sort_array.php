@@ -45,7 +45,7 @@ function order($arr, $typeOfSort)
     return $res1;
 }
 
-$type = "Desc";
+$type = "Asc";
 $arr = array(9, 8, 3, 7, 4, 6, 5);
 print_r(order($arr, $type));
 
