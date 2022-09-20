@@ -21,22 +21,20 @@ $final = array_splice($data1, $offset, $limit);
         <th>Content</th>
     </tr>
     <?php foreach ($final as $key => $value): ?>
-        <tr>
+        <tr bgcolor="<?php echo $key % 2 ? "#90EE90" : "#FFFFFF"; ?>">
             <?php foreach ($value as $index => $element): ?>
                 <?php if ($index == 'title' or $index == 'author' or $index == 'content') { ?>
-
-                    <td bgcolor="<?php if ($key % 2 != 0) {
-                        echo "#90EE90";
-                    } ?>">
-                        <?php echo !is_array($element) ? $element : implode(',', $element); ?></td>
+                    <td>
+                        <?php echo $element; ?>
+                    </td>
                 <?php } ?>
             <?php endforeach; ?>
         </tr>
     <?php endforeach; ?>
 </table>
 
-<?php
-for ($x = 1; $x <= $total_pages; $x++): ?>
-    <a href='index.php?page=<?php echo $x; ?>'><?php echo $x; ?></a>
+<span style="display: table">
+<?php for ($x = 1; $x <= $total_pages; $x++): ?>
+    <a style="padding-right:5px" href='index.php?page=<?= $x; ?>'><?= $x; ?></a>
 <?php endfor; ?>
-
+</span>
