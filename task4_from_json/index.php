@@ -1,17 +1,21 @@
 <?php
 echo '<pre>';
-$res = file_get_contents('posts.json');
+$res = @file_get_contents('posts.json');
+
+if (empty($res)) {
+    echo "Отсутствует json file";
+}
 
 echo "<br>";
 $data = json_decode($res, true);
-$data1 = $data['data'];
+$data = $data['data'];
 
-$page = !isset($_GET['page']) ? 1 : $_GET['page'];
+$page = $_GET['page'] ?? 1;
 $limit = 5;
-$offset = ($page - 1) * $limit;
-$total_items = count($data1);
+$offset = (($_GET['page'] ?? 1) - 1) * $limit;
+$total_items = count($data);
 $total_pages = ceil($total_items / $limit);
-$final = array_splice($data1, $offset, $limit);
+$final = array_splice($data, $offset, $limit);
 ?>
 
 <table border="1" cellpadding="10">
