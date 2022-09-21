@@ -44,6 +44,7 @@ if (empty($res)) {
                 echo "Данного ключа не существует";
                 break;
             default:
+
                 ?>
             <?php endswitch; ?>
         <tr bgcolor="<?php print_r($key % 2 ? "#90EE90" : "#FFFFFF") ?>">
