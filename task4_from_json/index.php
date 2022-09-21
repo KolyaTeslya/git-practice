@@ -2,14 +2,14 @@
 echo '<pre>';
 $res = @file_get_contents('posts.json');
 if (empty($res)) {
-    echo "Отсутствует файл";
+    die("Отсутствует файл");
 } else {
-    echo "<br>";
+
     $data = json_decode($res, true);
     $data = $data['data'];
 
     if (empty($data)) {
-        echo "Отсутствует data";
+        die("Отсутствует данные");
     }
 
     $page = $_GET['page'] ?? 1;
@@ -39,42 +39,29 @@ if (empty($res)) {
         <th>Content</th>
     </tr>
     <?php foreach ($final as $key => $value):?>
-        <?php switch (!is_array($key)):
-            case 0:
-                echo "Данного ключа не существует";
-                break;
-            default:
-
-                ?>
-            <?php endswitch; ?>
-        <tr bgcolor="<?php print_r($key % 2 ? "#90EE90" : "#FFFFFF") ?>">
-            <?php foreach ($value as $index => $element): ?>
-                <?php if ($index == 'title' or $index == 'author' or $index == 'content') { ?>
-                    <td>
-                        <?php print_r($element) ?>
-                    </td>
-                <?php } ?>
-            <?php endforeach; ?>
+        <tr bgcolor="<?= $key % 2 ? "#90EE90" : "#FFFFFF" ?>">
+            <td>
+                <?= $value['title'] ?>
+            </td>
+            <td>
+                <?= $value['author'] ?>
+            </td>
+            <td>
+                <?= $value['content'] ?>
+            </td>
         </tr>
     <?php endforeach; ?>
 </table>
 
 <span style="display: table">
-<?php
-$url = ((!empty($_SERVER['HTTPS'])) ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
-$x1 = substr($url, strlen($url)-1, 1);
-?>
 <?php for ($x = 1; $x <= $total_pages; $x++): ?>
 
-    <?php
-
-    if ($x1 == $x) {
-        echo '<a class="btn btn-danger" href="index.php?page='. $x.'">' . $x.'</a>';
-    } else {
-        echo '<a class="btn btn-warning" href="index.php?page='. $x.'">' . $x.'</a>';
-    }
-    ?>
+    <?php if ($page == $x) { ?>
+        <span class="btn btn-danger" > <?=$x ?></span>
+    <?php } else { ?>
+        <a class="btn btn-warning" href="index.php?page=<?=$x ?>"> <?=$x ?> </a>
+    <?php } ?>
 
 <?php endfor; ?>
 </span>
