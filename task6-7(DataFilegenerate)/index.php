@@ -109,7 +109,7 @@ if (isset($_POST['resource'])) {
             <select class="form-control" name="resource" id="test_resource">
                 <?php foreach ($variantsOfResources as $variant) { ?>
                     <option value="<?= $variant ?>">
-                        <?= $resource == $variant ? "selected" : ""; ?> <?= $variant ?> ///// не отрабатывает селектед  в одном пхп
+                        <?= $resource == $variant  ?> <?= $variant ?>
                     </option>
                 <?php } ?>
             </select>
