@@ -120,16 +120,16 @@ if (isset($_POST['resource'])) {
         <div class="form-group form-inline">
             <label for="_locale">на языке</label>
             <select class="form-control" name="_locale">
-                <option value="uk-UA" <?= ($locale == "ua_UA") ? "selected" : ""; ?>>Українська</option>
-                <option value="en-US" <?= ($locale == "en_US") ? "selected" : ""; ?>>English</option>
-                <option value="de-DE" <?= ($locale == "ge_GE") ? "selected" : ""; ?>>German</option>
-                <option value="fr-FR" <?= ($locale == "fr_FR") ? "selected" : ""; ?>>French</option>
+                <option value="uk-UA" <?= $locale == "ua_UA" ?>>Українська</option>
+                <option value="en-US" <?= $locale == "en_US" ?>>English</option>
+                <option value="de-DE" <?= $locale == "ge_GE" ?>>German</option>
+                <option value="fr-FR" <?= $locale == "fr_FR" ?>>French</option>
             </select>
             <label for="format">в формате</label>
             <select class="form-control" name="format">
-                <option value="Csv" <?= ($outputType == "Csv") ? "selected" : ""; ?> >*.csv</option>
-                <option value="Json" <?= ($outputType == "Json") ? "selected" : ""; ?> >*.json</option>
-                <option value="Php" <?= ($outputType == "Php") ? "selected" : ""; ?> >*.php</option>
+                <option value="Csv" <?= $outputType == "Csv" ?> >*.csv</option>
+                <option value="Json" <?= $outputType == "Json"  ?> >*.json</option>
+                <option value="Php" <?= $outputType == "Php" ?> >*.php</option>
             </select>
             <button class="btn-primary">Скачать </button>
         </div>
