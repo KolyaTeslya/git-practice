@@ -104,12 +104,12 @@ if (isset($_POST['resource'])) {
         <div class="form-group form-inline">
             <label for="_quantity">Получить </label>
             <input type="number" name="_quantity" min="1" max="100" step="1" class="form-control" id="amountInput"
-                   value=<?= $quantity ?>>
+                   value="<?= $quantity ?>">
             <label for="resource">строк данных типа </label>
             <select class="form-control" name="resource" id="test_resource">
-                <?php foreach ($variantsOfResources as $v) { ?>
-                    <option value=<?= $v ?>>
-                        <?php echo ($resource == $v) ? "selected" : ""; ?> <?= $v ?>
+                <?php foreach ($variantsOfResources as $variant) { ?>
+                    <option value="<?= $variant ?>">
+                        <?= $resource == $variant ? "selected" : ""; ?> <?= $variant ?> ///// не отрабатывает селектед  в одном пхп
                     </option>
                 <?php } ?>
             </select>
@@ -131,9 +131,7 @@ if (isset($_POST['resource'])) {
                 <option value="Json" <?= ($outputType == "Json") ? "selected" : ""; ?> >*.json</option>
                 <option value="Php" <?= ($outputType == "Php") ? "selected" : ""; ?> >*.php</option>
             </select>
-            <button class="btn-primary "
-            ">Скачать
-            </button>
+            <button class="btn-primary">Скачать </button>
         </div>
     </div>
 </form>
