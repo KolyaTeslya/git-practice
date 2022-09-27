@@ -1,0 +1,28 @@
+27-09-2022 05:40:41  *** EMAIL FORMAT ERROR *** email admin@mail.com not match to template! *** a:0:{}
+27-09-2022 05:40:41  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:41:12  *** EMAIL FORMAT ERROR *** email wwfex@dwd not match to template! *** a:0:{}
+27-09-2022 05:41:12  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:41:12  *** PASSWORD FORMAT ERROR *** password not match to template! *** a:0:{}
+27-09-2022 05:41:28  *** EMAIL FORMAT ERROR *** email wwfex@dwd not match to template! *** a:0:{}
+27-09-2022 05:41:28  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:41:28  *** PASSWORD FORMAT ERROR *** password not match to template! *** a:0:{}
+27-09-2022 05:41:36  *** EMAIL FORMAT ERROR *** email wwfex@dwd not match to template! *** a:0:{}
+27-09-2022 05:41:36  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:41:36  *** PASSWORD FORMAT ERROR *** password not match to template! *** a:0:{}
+27-09-2022 05:45:50  *** EMAIL FORMAT ERROR *** email wwfex@dwd not match to template! *** a:0:{}
+27-09-2022 05:45:50  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:45:50  *** PASSWORD FORMAT ERROR *** password not match to template! *** a:0:{}
+27-09-2022 05:47:42  *** EMAIL FORMAT ERROR *** email wwfex@dwd not match to template! *** a:0:{}
+27-09-2022 05:47:42  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:47:42  *** PASSWORD FORMAT ERROR *** password not match to template! *** a:0:{}
+27-09-2022 05:49:04  *** EMAIL FORMAT ERROR *** email wwfex@dwd not match to template! *** a:0:{}
+27-09-2022 05:49:04  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:49:04  *** PASSWORD FORMAT ERROR *** password not match to template! *** a:0:{}
+27-09-2022 05:49:25  *** EMAIL FORMAT ERROR *** email admin@mail.com not match to template! *** a:0:{}
+27-09-2022 05:49:25  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:50:10  *** EMAIL FORMAT ERROR *** email admin@mail.com not match to template! *** a:0:{}
+27-09-2022 05:50:10  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:50:14  *** EMAIL FORMAT ERROR *** email admin@mail.com not match to template! *** a:0:{}
+27-09-2022 05:50:14  *** PASSWORD MATCH ERROR ***  password not equal to confirmation! *** a:0:{}
+27-09-2022 05:53:03  *** EMAIL ACCESS ERROR *** email sem@www.dfg cannot be use. reserved! *** a:0:{}
+27-09-2022 05:54:36  *** EMAIL ACCESS ERROR *** email sem@www.dfg cannot be use. reserved! *** a:0:{}

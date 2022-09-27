@@ -1,0 +1,19 @@
+{
+    "name": "ns/t1",
+    "type": "project",
+    "require": {
+        "technopreacher/logger": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "ns\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "TechnoPreacher",
+            "email": "nik.nik.sulima@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev"
+}
